@@ -568,7 +568,7 @@ text-right {
 .the-form-container {
     background-color: #1d0130;
     border-radius: 1rem;
-    width: 57.5%;
+     width: 50rem;
 }
 .the-form {
     display: flex;
