@@ -959,10 +959,10 @@ textarea {
 
 .eCourseslangs {
     display: grid;
-    margin-left: 4rem;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 6rem;
-
+    margin-left: 1rem;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 0rem;
+    width: 14rem;
 }
 
 .eCoursesBtn {
@@ -994,5 +994,8 @@ textarea {
 
     .btn-container2 {
         grid-template-columns: repeat(1, auto);
+    }
+      .desc-text{
+        font-size: 0.9rem;
     }
 }
