@@ -371,12 +371,12 @@ text-right {
 }
 
 .edu-container {
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 5px 10px 0px rgb(50, 50, 50);
     background-color: #fff;
-    border-radius: 8rem;
     padding-top: 0.3rem;
     padding-bottom: 0.5rem;
 }
@@ -415,7 +415,7 @@ text-right {
 }
 
 .pte-list {
-    border-radius: 8rem;
+    border-radius: 10px;
     height: 7.5rem;
     padding-bottom: 0.2rem;
     padding-top: 0.2rem;
