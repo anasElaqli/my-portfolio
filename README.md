@@ -7,7 +7,7 @@ I'm pretty happy with the current version, but I'm always open to more improveme
 
 ![image](https://user-images.githubusercontent.com/125779604/221170536-c5d60675-3d4b-4dbc-a41f-3ce4f0682a1f.png)
 
-![image](https://user-images.githubusercontent.com/125779604/221170570-77679122-bf0b-401c-a1c7-59011ef23d68.png)
+![education](https://user-images.githubusercontent.com/125779604/221415993-f97bce4e-4a19-426d-ac64-640045b00bd0.png)
 
 ![image](https://user-images.githubusercontent.com/125779604/221170618-1ee83cbf-86a4-4ce5-be61-50a8768100b0.png)
 
