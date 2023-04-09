@@ -316,19 +316,24 @@ text-right {
 }
 
 #icons {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     font-size: 1rem;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
     justify-content: space-evenly;
     gap: 1rem;
-    row-gap: 2rem;
+    row-gap: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon_place {
-    margin-top: 1.3rem;
+    margin: 2rem;
+    
 }
 
 .icon_place img {
@@ -350,8 +355,8 @@ text-right {
 
 
 @media (max-width: 768px) {
-    #icons {
-        grid-template-columns: repeat(3, auto);
+    .icon_place {
+        margin: 1.3rem;
     }
 }
 
