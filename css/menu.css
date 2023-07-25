@@ -16,22 +16,30 @@
     margin: 0 0 8px 0;
     font-size: 28px;
     transition: all 800ms ease-out;
+    color: rgb(149, 1, 179);
+    /* color: #1d0130; */
 }
 
 .menu-toggle.close .fa {
     transform: rotate(180deg);
+    
 }
 
 .menu-toggle.close .fa:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
+    color: #1d0130;
+    color: rgb(149, 1, 179);
 }
 
 .menu-toggle.close .fa:nth-child(2) {
-    opacity: 0;
+    /* opacity: 0; */
+    transform: scaleX(0);
 }
 
 .menu-toggle.close .fa:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(6.7px, -5px);
+    color: #1d0130;
+    color: rgb(149, 1, 179);
 }
 
 
