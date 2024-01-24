@@ -1,5 +1,10 @@
 /* Nav ----------------------------------------------------*/
 
+:root {
+    --main_color--: rgb(1, 33, 78);
+    --btn_color--: rgb(2, 170, 196);
+    --border_color--: rgb(3, 129, 149);
+}
 
 .menu-toggle {
     position: absolute;
@@ -16,8 +21,7 @@
     margin: 0 0 8px 0;
     font-size: 28px;
     transition: all 800ms ease-out;
-    color: rgb(149, 1, 179);
-    /* color: #1d0130; */
+    color: var(--border_color--);
 }
 
 .menu-toggle.close .fa {
@@ -27,8 +31,7 @@
 
 .menu-toggle.close .fa:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-    color: #1d0130;
-    color: rgb(149, 1, 179);
+    color: var(--border_color--);
 }
 
 .menu-toggle.close .fa:nth-child(2) {
@@ -38,8 +41,7 @@
 
 .menu-toggle.close .fa:nth-child(3) {
     transform: rotate(-45deg) translate(6.7px, -5px);
-    color: #1d0130;
-    color: rgb(149, 1, 179);
+    color: var(--border_color--);
 }
 
 
@@ -73,22 +75,17 @@
     list-style-type: none;
 }
 
-:root {
-    --main_purple--: rgb(149, 1, 179);
-    --btn_purple--: rgb(150, 6, 171);
-}
 .menu-nav a {
     display: block;
     padding: 7px 0 8px 0;
     text-decoration: none;
     font-size: 28px;
-    color: var(--main_purple--);
+    color: var(--border_color--);
    
 }
 
 .menu-nav a:hover {
-    color: rgb(207, 0, 248);
-   
+    color: var(--btn_color--);  
 }
 
 

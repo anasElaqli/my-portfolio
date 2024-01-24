@@ -1,4 +1,11 @@
 /*Body ----------------------------------------------------*/
+
+:root {
+    --main_color--: rgb(1, 33, 78);
+    --btn_color--: rgb(2, 170, 196);
+    --border_color--: rgb(3, 129, 149);
+}
+
 html,
 body {
     margin: 0;
@@ -83,14 +90,6 @@ text-right {
 }
 
 
-
-:root {
-    --main_purple--: rgb(149, 1, 179);
-    --btn_purple--: rgb(150, 6, 171);
-}
-
-
-
 /* Header ----------------------------------------------------*/
 
 .site-header {
@@ -114,13 +113,14 @@ text-right {
 }
 
 .brand {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .brand a {
     text-decoration: none;
     color: #1d0130;
     font-family: 'Ubuntu', sans-serif;
+    margin-left: 0;
 }
 
 .job a {
@@ -137,7 +137,7 @@ text-right {
 }
 
 #footer {
-    background-color: #1d0130;
+    background-color:  var(--main_color--);
     padding: 1rem;
 }
 
@@ -159,7 +159,7 @@ text-right {
 
 .footer-icons a {
     text-decoration: none;
-    color: rgb(149, 1, 179);
+    /* color: rgb(149, 1, 179); */
 }
 
 .owner2 {
@@ -214,8 +214,17 @@ text-right {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #1d0130;
-    color: #d2d0d0;
+    background-color: var(--main_color--);
+    color: white;
+}
+
+.section-title {
+    font-size: 4rem;
+    color: var(--btn_color--);
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    -webkit-text-stroke: 0.5px var(--border_color--);
 }
 
 #about .lead {
@@ -235,50 +244,71 @@ text-right {
     text-decoration: none;
     border-radius: 2rem;
     font-family: 'Ubuntu', sans-serif;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, border-color 0.3s;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgb(241, 251, 251, 0.2);
 }
 
+
+
+.btn:active {
+    transform: scale(0.9);
+}
 .btn-primary span,
 .btn-secondary span {
     padding-left: 10px;
 }
 
 .btn-primary {
-    border: var(--btn_purple--) 1.5px solid;
     color: #fff;
-    background: var(--btn_purple--);
+    background: rgb(2, 153, 176);
     padding: 0.7rem 1.5rem;
-    border: rgb(101, 2, 116) 2px solid;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    border:  rgb(1, 123, 142) 2px solid;
+}
+
+.btn-primary:hover {
+    border: var(--btn_color--) 1.5px solid;
+    background: var(--border_color--);
+    transform: scale(1.1);
 }
 
 
 .btn-secondary {
-    border: var(--btn_purple--) 1.5px solid;
-    color: var(--btn_purple--);
+    border: var(--btn_color--) 1.5px solid;
+    color: var(--btn_color--);
     padding: 0.7rem 1.5rem;
     border: 2px solid;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.btn-primary:hover {
-    border: var(--main_purple--) 1.5px solid;
-    background: rgb(94, 4, 108);
-}
 
 .btn-secondary:hover {
-    border: var(--main_purple--) 1.5px solid;
+    border: var(--btn_color--) 1.5px solid;
+    background: var(--border_color--);
     color: rgb(236, 235, 235);
-    background: rgb(94, 4, 108);
     padding: 0.7rem 1.5rem;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgb(241, 251, 251, 0.2);
 }
 
-.btn:hover {
-    margin: 1.25rem;
+/* .btn-secondary:active{
+    transform: translate(0, 0);
+} */
+.btn:before {
+    /* content: ''; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 0%, transparent 50%, rgba(255, 255, 255, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
-
-.discover-app a:hover {
-    margin: 0;
+.btn:hover:before {
+    opacity: 1;
 }
 
 
@@ -305,16 +335,8 @@ text-right {
 
 /* Skills ----------------------------------------------------*/
 
-.section-title {
-    font-size: 4rem;
-    color: rgb(149, 1, 179);
-    font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 2rem;
-    margin-top: 0;
-}
-
 #skills {
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     color: #d2d0d0;
     padding-top: 2rem;
     padding-bottom: 4rem;
@@ -373,9 +395,9 @@ text-right {
     justify-content: center;
 }
 
-/* #education{
-    background-color:#1d0130;
-} */
+#education{
+    background-color: var(--main_color--);
+}
 
 .edu-container {
     border-radius: 10px;
@@ -387,7 +409,7 @@ text-right {
     padding-top: 0.5rem;
     padding-bottom: 4.05rem;
     font-family: 'Ubuntu', sans-serif;
-    border:  rgb(149, 1, 179) 1px solid;
+    border:  var(--border_color--) 2px solid;
 }
 
 .pte-list {
@@ -416,7 +438,7 @@ text-right {
     height: 130px;
     width: auto;
     border-radius: 50%;
-    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.33));
+    filter: drop-shadow(0px 10px 10px rgba(12, 77, 147, 0.33));
 }
 .pte-logo{
     display: flex;
@@ -525,14 +547,14 @@ text-right {
 
 .myemail a {
     text-decoration: none;
-    color: var(--btn_purple--);
+    color: var(--btn_color--);
 
 }
 
 .mylinkedin a {
     font-size: 1.2rem;
     text-decoration: none;
-    color: var(--btn_purple--);
+    color: var(--btn_color--);
 
 }
 
@@ -547,7 +569,7 @@ text-right {
 .contacts svg {
     position: relative;
     top: 0;
-    color: var(--main_purple--);
+    color: var(--btn_color--);
 }
 
 .contacts h1 {
@@ -586,7 +608,7 @@ text-right {
 }
 
 .the-form-container {
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     border-radius: 1rem;
     width: 50rem;
 }
@@ -595,7 +617,7 @@ text-right {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     margin: 1rem;
     padding-bottom: 2.2rem;
 }
@@ -625,9 +647,10 @@ textarea {
 
 .the-form h1 {
     font-size: 2.3rem;
-    color: var(--main_purple--);
+    color: var(--btn_color--);
     font-family: 'Ubuntu', sans-serif;
 }
+
 
 
 .submit {
@@ -636,8 +659,8 @@ textarea {
     cursor: pointer;
     margin-left: 0.5rem;
     color: #fff;
-    background: var(--btn_purple--);
-    border: var(--main_purple--) 1.5px solid;
+    background: var(--btn_color--);
+    border: var(--border_color--) 1.5px solid;
     border-radius: 2rem;
     margin-top: 0.3rem;
     width: 10rem;
@@ -646,9 +669,10 @@ textarea {
 
 .submit:hover,
 .submit:focus {
-    border: var(--main_purple--) 1.5px solid;
+    border: var(--btn_color--) 1.5px solid;
     color: rgb(236, 235, 235);
-    background: rgb(94, 4, 108);
+    background: var(--border_color--);
+    box-shadow: 0 5px 15px rgb(241, 253, 253, 0.2);
 }
 
 
@@ -699,14 +723,16 @@ textarea {
 .project-demo {
     background-color: rgb(253, 253, 253);
     border-radius: 6px;
-    padding: 0.2rem;
+    padding: 0.3rem;
+    padding-bottom: 0.7rem;
 }
 
 .demo-title {
     text-align: center;
     font-weight: 700;
-    color: rgb(140, 29, 162);
+    color: var(--border_color--);
     font-family: 'Ubuntu', sans-serif;
+    -webkit-text-stroke: 0.5px rgb(2, 133, 153);
 }
 
 
@@ -756,7 +782,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 0.6rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -780,11 +806,13 @@ textarea {
     align-items: center;
     grid-template-columns: repeat(3, auto);
     gap: 0.5rem;
+    height: 260px;
+    /* background-color: #1d0130; */
 }
 
 .prev {
     cursor: pointer;
-    color: rgb(132, 0, 137);
+    color: var(--border_color--);
     font-weight: bold;
     font-size: 21px;
     user-select: none;
@@ -793,7 +821,7 @@ textarea {
 
 .next {
     cursor: pointer;
-    color: rgb(132, 0, 137);
+    color: var(--border_color--);
     font-weight: bold;
     font-size: 21px;
     user-select: none;
@@ -802,7 +830,7 @@ textarea {
 
 .prev:hover,
 .next:hover {
-    color: rgba(186, 1, 177, 0.8);
+    color: var(--btn_color--);
 }
 
 .pics-row {
@@ -815,7 +843,7 @@ textarea {
 }
 
 .numbertext {
-    color: rgb(149, 1, 179);
+    color: var(--border_color--);
     text-align: center;
    font-weight: 700;
    font-family: 'Ubuntu', sans-serif;
@@ -832,7 +860,7 @@ textarea {
 .demo3,
 .demo4,
 .demo5,
-.demo6{
+.demo6, .demo7, .demo8, .demo9{
     opacity: 0.6;
 }
 
@@ -873,32 +901,54 @@ textarea {
 }
 
 .btn-primary2 {
-    border: var(--btn_purple--) 1.5px solid;
+    border: var(--border_color--) 2px solid;
     color: #fff;
-    background: var(--btn_purple--);
+    background: var(--btn_color--);
     padding: 0.7rem 1.5rem;
-    border: rgb(101, 2, 116) solid 2px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-
-.btn-secondary2 {
-    border: var(--btn_purple--) 1.5px solid;
-    color: var(--btn_purple--);
-    padding: 0.7rem 1.5rem;
-    border: 2px solid;
-    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    /* transition: background-color 0.3s, border-color 0.3s; */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn-primary2:hover {
-    border: var(--main_purple--) 1.5px solid;
-    background: rgb(94, 4, 108);
+    border: var(--btn_color--) 1.5px solid;
+    background: var(--border_color--);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgb(239, 251, 251, 0.2)
 }
 
+.btn-primary2:before, .btn-secondary2:before {
+    /* content: ''; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 0%, transparent 50%, rgba(255, 255, 255, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-primary2:hover:before, .btn-secondary2:hover:before {
+    opacity: 1;
+}
+
+.btn-secondary2 {
+    border: var(--btn_color--) 1.5px solid;
+    color: var(--btn_color--);
+    padding: 0.7rem 1.5rem;
+    border: 2px solid;
+    /* transition: background-color 0.3s, border-color 0.3s, color 0.3s; */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+
 .btn-secondary2:hover {
-    border: var(--main_purple--) 1.5px solid;
     color: rgb(236, 235, 235);
-    background: rgb(94, 4, 108);
+    border: var(--btn_color--) 1.5px solid;
+    background: var(--border_color--);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgb(239, 251, 251, 0.2)
 }
 
 .btn2:hover {
@@ -918,7 +968,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 4rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -939,12 +989,44 @@ textarea {
     padding: 0;
 }
 
+.ds1, .ds2, .ds3 {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 4rem;
+    background-color: var(--main_color--);
+    padding: 1rem;
+    border-radius: 6px;
+    /* height: 460px; */
+    overflow: hidden;
+}
+
+.ds1langs {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 0rem;
+    width: 16rem;
+
+}
+
+.ds1btn{
+    width: 20rem;
+}
+
+.ds1langs img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
 .showPortfolio {
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 4rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -974,7 +1056,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 4rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -1004,7 +1086,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 4rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -1047,7 +1129,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, auto);
     margin-top: 4rem;
-    background-color: #1d0130;
+    background-color: var(--main_color--);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -1065,7 +1147,7 @@ textarea {
     .eCourses,
     .showPortfolio,
     .Bunlog,
-    .studStation {
+    .studStation, .ds1, .ds2, .ds3 {
         display: grid;
         grid-template-columns: repeat(1, auto);
     }
