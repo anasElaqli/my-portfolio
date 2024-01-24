@@ -137,7 +137,7 @@ text-right {
 }
 
 #footer {
-    background-color:  var(--main_color--);
+    background-color: var(--main_color--);
     padding: 1rem;
 }
 
@@ -247,7 +247,8 @@ text-right {
     overflow: hidden;
     transition: background-color 0.3s, color 0.3s, transform 0.3s, border-color 0.3s;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.1);
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 5px 15px rgb(241, 251, 251, 0.2);
@@ -258,6 +259,7 @@ text-right {
 .btn:active {
     transform: scale(0.9);
 }
+
 .btn-primary span,
 .btn-secondary span {
     padding-left: 10px;
@@ -267,7 +269,7 @@ text-right {
     color: #fff;
     background: rgb(2, 153, 176);
     padding: 0.7rem 1.5rem;
-    border:  rgb(1, 123, 142) 2px solid;
+    border: rgb(1, 123, 142) 2px solid;
 }
 
 .btn-primary:hover {
@@ -307,6 +309,7 @@ text-right {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 .btn:hover:before {
     opacity: 1;
 }
@@ -344,7 +347,7 @@ text-right {
 }
 
 #icons {
-    font-size: 1rem;  
+    font-size: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -395,7 +398,7 @@ text-right {
     justify-content: center;
 }
 
-#education{
+#education {
     background-color: var(--main_color--);
 }
 
@@ -409,7 +412,7 @@ text-right {
     padding-top: 0.5rem;
     padding-bottom: 4.05rem;
     font-family: 'Ubuntu', sans-serif;
-    border:  var(--border_color--) 2px solid;
+    border: var(--border_color--) 2px solid;
 }
 
 .pte-list {
@@ -440,7 +443,8 @@ text-right {
     border-radius: 50%;
     filter: drop-shadow(0px 10px 10px rgba(12, 77, 147, 0.33));
 }
-.pte-logo{
+
+.pte-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -724,7 +728,8 @@ textarea {
     background-color: rgb(253, 253, 253);
     border-radius: 6px;
     padding: 0.3rem;
-    padding-bottom: 0.7rem;
+    /* padding-bottom: 0.3rem; */
+    width: 30rem;
 }
 
 .demo-title {
@@ -806,10 +811,23 @@ textarea {
     align-items: center;
     grid-template-columns: repeat(3, auto);
     gap: 0.5rem;
-    height: 260px;
+    height: 240px;
     /* background-color: #1d0130; */
 }
 
+.show-imageWK{
+    height: 280px;
+}
+.show-imagedS1{
+    height: 300px;
+}
+.show-imagedS2{
+    height: 300px;
+}
+.show-imagedS3
+{
+    height: 300px;
+}
 .prev {
     cursor: pointer;
     color: var(--border_color--);
@@ -845,9 +863,9 @@ textarea {
 .numbertext {
     color: var(--border_color--);
     text-align: center;
-   font-weight: 700;
-   font-family: 'Ubuntu', sans-serif;
-    
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 .cursor {
@@ -860,7 +878,10 @@ textarea {
 .demo3,
 .demo4,
 .demo5,
-.demo6, .demo7, .demo8, .demo9{
+.demo6,
+.demo7,
+.demo8,
+.demo9 {
     opacity: 0.6;
 }
 
@@ -917,7 +938,8 @@ textarea {
     box-shadow: 0 5px 15px rgb(239, 251, 251, 0.2)
 }
 
-.btn-primary2:before, .btn-secondary2:before {
+.btn-primary2:before,
+.btn-secondary2:before {
     /* content: ''; */
     top: 0;
     left: 0;
@@ -928,7 +950,8 @@ textarea {
     transition: opacity 0.3s;
 }
 
-.btn-primary2:hover:before, .btn-secondary2:hover:before {
+.btn-primary2:hover:before,
+.btn-secondary2:hover:before {
     opacity: 1;
 }
 
@@ -972,6 +995,19 @@ textarea {
     padding: 1rem;
     border-radius: 6px;
 }
+.ds1,
+.ds2,
+.ds3 {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 4rem;
+    background-color: var(--main_color--);
+    padding: 1rem;
+    border-radius: 6px;
+    /* height: 460px; */
+    /* width: 100%; */
+}
 
 .worldKinglangs {
     display: grid;
@@ -989,17 +1025,7 @@ textarea {
     padding: 0;
 }
 
-.ds1, .ds2, .ds3 {
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin-top: 4rem;
-    background-color: var(--main_color--);
-    padding: 1rem;
-    border-radius: 6px;
-    /* height: 460px; */
-    overflow: hidden;
-}
+
 
 .ds1langs {
     display: grid;
@@ -1010,7 +1036,7 @@ textarea {
 
 }
 
-.ds1btn{
+.ds1btn {
     width: 20rem;
 }
 
@@ -1046,7 +1072,8 @@ textarea {
     margin: 0;
     padding: 0;
 }
-.showPortfolioBtn{
+
+.showPortfolioBtn {
     width: 14rem;
     margin: 0;
 }
@@ -1147,9 +1174,15 @@ textarea {
     .eCourses,
     .showPortfolio,
     .Bunlog,
-    .studStation, .ds1, .ds2, .ds3 {
+    .studStation,
+    .ds1,
+    .ds2,
+    .ds3 {
         display: grid;
         grid-template-columns: repeat(1, auto);
+        padding-right: 1.25rem;
+        padding-left: 0.75rem;
+
     }
 
     .Bunloglangs {
@@ -1162,5 +1195,8 @@ textarea {
 
     .desc-text {
         font-size: 0.9rem;
+    }
+    .project-demo {
+        width: 100%;
     }
 }
